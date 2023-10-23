@@ -5,7 +5,7 @@ Infrastructure as Code project for Duke's Coursera Cloud Computing course
 
 
 
-### Makefil
+### Makefile
 
 ```
 install:
