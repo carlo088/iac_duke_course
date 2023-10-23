@@ -4,6 +4,7 @@ Infrastructure as Code project for Duke's Coursera Cloud Computing course
 After having cloned the repo, cd in ./iac_duke_course.
 
 #### venv
+First create and then source a venv inside the project folder
 ```
 python -m venv ~./iac_duke_course
 source ~./iac_duke_course/bin/activate
