@@ -3,6 +3,12 @@ Infrastructure as Code project for Duke's Coursera Cloud Computing course
 
 After having cloned the repo, cd in ./iac_duke_course.
 
+#### shh
+To ssh into azureVM from my MacOS
+```
+ssh -i ~/Documents/azureVM/myKey.pem azureuser@13.69.50.184
+```
+
 #### venv
 First create and then source a venv inside the project folder
 ```
