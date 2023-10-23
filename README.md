@@ -1,12 +1,15 @@
 # iac_duke_course
 Infrastructure as Code project for Duke's Coursera Cloud Computing course 
 
+After having cloned the repo, cd in ./iac_duke_course.
 
+#### venv
+```
+python -m venv ~./iac_duke_course
+source ~./iac_duke_course/bin/activate
+```
 
-
-
-### Makefile
-
+#### makefile
 ```
 install:
 	pip install --upgrade pip
