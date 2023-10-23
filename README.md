@@ -5,8 +5,9 @@ Infrastructure as Code project for Duke's Coursera Cloud Computing course
 
 
 
+### Makefil
 
-'''
+```
 install:
 	pip install --upgrade pip
 	pip install -r requirements.txt
@@ -19,4 +20,4 @@ lint:
 
 test:
 	python -m pytest --vv --cov=hello test_hello.py
- '''
+ ```
