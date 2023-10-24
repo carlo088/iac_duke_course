@@ -10,7 +10,7 @@ To ssh into azureVM from my MacOS
 ```
 ssh -i ~/Documents/azureVM/myKey.pem azureuser@13.69.50.184
 ```
-#### When using a virtual code ditor
+#### When using a virtual code Editor
 One needs to clone the repo with SSH. First create keys:
 ```
 ssh-keygen -t rsa
