@@ -1,4 +1,4 @@
-## iac_duke_course
+## iac_notes
 Infrastructure as Code project for Duke's Coursera Cloud Computing course
 
 [![Python 3.8](https://github.com/carlo088/iac_duke_course/actions/workflows/main.yml/badge.svg)](https://github.com/carlo088/iac_duke_course/actions/workflows/main.yml)
