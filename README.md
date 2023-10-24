@@ -10,7 +10,19 @@ To ssh into azureVM from my MacOS
 ```
 ssh -i ~/Documents/azureVM/myKey.pem azureuser@13.69.50.184
 ```
-
+#### To clone repo with SSH
+Create keys:
+```
+ssh-keygen -t rsa
+```
+Then get the path where the key is stored and:
+```
+cat /path/to/key/id_rsa.pub azureuser@13.69.50.184
+```
+Then copy the key. Go to GitHhub -> Profile -> Settings -> SSH ang GPG keys -> New SSH key and paste the copied key. Then go to repo, code, and SSH. Afterwards:
+```
+git clone git@github.com:xxxx
+```
 #### venv
 First create and then source a venv inside the project folder
 ```
