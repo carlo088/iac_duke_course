@@ -1,7 +1,7 @@
 ## iac_duke_course
 Infrastructure as Code project for Duke's Coursera Cloud Computing course 
 
-After having cloned the repo, ```cd in iac_duke_course```.
+After having cloned the repo, ```cd iac_duke_course```.
 
 #### shh
 To ssh into azureVM from my MacOS
@@ -42,7 +42,7 @@ all: install lint test
 #### GitHub Actions
 
 In GitHub, select Actions and then "set up a workflow yoursel".
-In ```.github/workflows/``` one will find ```main.yml". Already hae a template: whenever one pushes new code to the repo, a set of tests gets done. If one already has a ```Makefile```, this becomes trivial.
+In ```.github/workflows/``` one will find ```main.yml```. Already has a template: whenever one pushes new code to the repo, a set of tests gets done. If one already has a ```Makefile```, this becomes trivial.
 ```
 name: Python 3.8
 on: [push]
@@ -68,4 +68,4 @@ jobs:
       run: |
         make format
 ```
-On every ```push```, run on ```ubunt```u, set up ```python``` and then use the ```make``` commands
+On every ```push```, run on ```ubuntu```, set up ```python``` and then use the ```make``` commands.
