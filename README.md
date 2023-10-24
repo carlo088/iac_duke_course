@@ -10,19 +10,20 @@ To ssh into azureVM from my MacOS
 ```
 ssh -i ~/Documents/azureVM/myKey.pem azureuser@13.69.50.184
 ```
-#### To clone repo with SSH
-Create keys:
+#### When using a virtual code ditor
+One needs to clone the repo with SSH. First create keys:
 ```
 ssh-keygen -t rsa
 ```
 Then get the path where the key is stored and:
 ```
-cat /path/to/key/id_rsa.pub azureuser@13.69.50.184
+cat /path/to/key/id_rsa.pub
 ```
-Then copy the key. Go to GitHhub -> Profile -> Settings -> SSH ang GPG keys -> New SSH key and paste the copied key. Then go to repo, code, and SSH. Afterwards:
+Then copy the key. Go to GitHhub -> Profile -> Settings -> SSH ang GPG keys -> New SSH key and paste the copied key. Then go to repo, code, and copy the SSH address. Afterwards:
 ```
-git clone git@github.com:xxxx
+git clone $"SSH address"
 ```
+
 #### venv
 First create and then source a venv inside the project folder
 ```
@@ -83,3 +84,12 @@ jobs:
         make format
 ```
 On every ```push```, run on ```ubuntu```, set up ```python``` and then use the ```make``` commands.
+
+#### Azure Cloud
+Azure Cloud is using a different version of python. This means that I can add to the Makefile a different install that takes a different requirements file.
+```
+install-azure:
+	pip install --upgrade pip
+	pip install -r requirements-azure.txt
+ ```
+Then I can also build another build for the GitHub Actions.
