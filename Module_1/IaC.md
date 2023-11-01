@@ -27,7 +27,6 @@ resource "azurerm_resource_group" "myterraformgroup" {
     name = "myResourceGroup"
     location = "eastus"
 
-
   tags = {
       environment = "Terraform Demo"
   }
@@ -40,7 +39,6 @@ resource "azurerm_virtual_network" "myterraformnetwork" {
     address_space = ["10.0.0.0/16"]
     location = "eastus"
     resource_group_name = azurerm_resource_group.myterraformgroup.name
-
 
   tags = {
       environment = "Terraform Demo"
@@ -76,7 +74,6 @@ resource "azurerm_network_security_group" "myterraformnsg" {
     location = "eastus"
     resource_group_name = azurerm_resource_group.myterraformgroup.name
 
-
     security_rule {
         name = "SSH"
         priority = 1001
@@ -88,7 +85,6 @@ resource "azurerm_network_security_group" "myterraformnsg" {
         source_address_prefix = "*"
         destination_address_prefix = "*"
     }
-
 
     tags = {
         environment = "Terraform Demo"
@@ -103,14 +99,12 @@ resource "azurerm_network_interface" "myterraformnic" {
     resource_group_name = azurerm_resource_group.myterraformgroup.name
     ip_configuration {
 
-
         name = "myNicConfiguration"
         subnet_id = azurerm_subnet.myterraformsubnet.id
         private_ip_address_allocation = "Dynamic"
         public_ip_address_id = azurerm_public_ip.myterraformpublicip.id
         public_ip_address_id = azurerm_public_ip.myterraformpublicip.id
     }
-
 
     tags = {
         environment = "Terraform Demo"
@@ -144,7 +138,6 @@ resource "azurerm_storage_account" "mystorageaccount" {
     account_tier = "Standard"
     account_replication_type = "LRS"
 
-
     tags = {
         environment = "Terraform Demo"
     }
@@ -157,7 +150,6 @@ resource "tls_private_key" "example_ssh" {
     rsa_bits = 4096
 }
 
-
 output "tls_private_key" { value = tls_private_key.example_ssh.private_key_pem }
 
 
@@ -169,13 +161,11 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
     network_interface_ids = [azurerm_network_interface.myterraformnic.id]
     size = "Standard_DS1_v2"
 
-
     os_disk {
         name = "myOsDisk"
         caching = "ReadWrite"
         storage_account_type = "Premium_LRS"
     }
-
 
     source_image_reference {
         publisher = "Canonical"
@@ -184,11 +174,9 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
         version = "latest"
     }
 
-
     computer_name = "myvm"
     admin_username = "azureuser"
     disable_password_authentication = true
-
 
     admin_ssh_key {
     admin_ssh_key {
