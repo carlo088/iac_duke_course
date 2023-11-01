@@ -7,9 +7,10 @@ We will use:
 1. Access **Azure DevOps**
 2. Configure project
 the course skips the part in which the project, along with the ```azure-pipeline.yml``` gets set up. Scroll down for complete ```azure-pipeline.yml```.
-4. Access **Pipeline** section -> by clicking on code, you will automatically be redirected on GitHub source code
-5. A push in the repo triggers a new build in the DevOps Azure
-6. By accessing web app on the server, the app is already running the new build
+4. Access **Pipeline** section and run app service
+5. Now by clicking on code, you will automatically be redirected on GitHub source code (remember that Azure Pipelines has to be enabled in GitHub repo)
+6. A push in the repo triggers a new build in the DevOps Azure
+7. By accessing web app on the server, the app is already running the new build
 
 Link to repo: https://github.com/noahgift/flask-ml-azure-serverless
 
