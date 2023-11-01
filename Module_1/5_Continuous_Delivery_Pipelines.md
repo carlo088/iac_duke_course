@@ -4,9 +4,9 @@ We will use:
 3. AWS Code Pipeline is a CI/CD integrated in AWS framework
 
 ### Deploy Flask ML App on Azure
-1. Access Azure DevOps
+1. Access *Azure DevOps*
 2. Configure project
-3. Access Pipeline section -> by clicking on code, you will automatically be redirected on GitHub source code
+3. Access *Pipeline* section -> by clicking on code, you will automatically be redirected on GitHub source code
 4. A push in the repo triggers a new build in the DevOps Azure
 5. By accessing web app on the server, the app is already running the new build
 
