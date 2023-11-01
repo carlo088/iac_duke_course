@@ -10,7 +10,7 @@ To ssh into azureVM from my MacOS
 ```
 ssh -i ~/Documents/azureVM/myKey.pem azureuser@13.69.50.184
 ```
-#### When using a virtual code Editor
+#### When using a Virtual Code Editor
 One needs to clone the repo with SSH. First create keys:
 ```
 ssh-keygen -t rsa
@@ -55,7 +55,6 @@ all: install lint test
 4. Test -> pytest is the tool with the script to run to test. To test: ```make test```
 
 #### GitHub Actions
-
 In GitHub, select Actions and then "set up a workflow yoursel".
 In ```.github/workflows/``` one will find ```main.yml```. Already has a template: whenever one pushes new code to the repo, a set of tests gets done. If one already has a ```Makefile```, this becomes trivial.
 ```
@@ -93,3 +92,6 @@ install-azure:
 	pip install -r requirements-azure.txt
  ```
 Then I can also build another build for the GitHub Actions.
+
+#### GCP Google Cloud Engine
+Example of app deployed on GCP. Can access port to see the Flask App. Through GCP settings, one can connect app to GitHub repo of app code to have a Continuos Delivery. At every push on repo, trigger activates and updates app on the GCP.
