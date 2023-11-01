@@ -1,4 +1,4 @@
-### Cloud Computing
+## Cloud Computing
 Most of this has been done from a AWS *Cloud9* shell
 
 #### Static S3 Website
