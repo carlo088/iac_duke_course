@@ -6,8 +6,7 @@ We will use:
 ### Deploy Flask ML App on Azure
 1. Access **Azure DevOps**
 2. Configure project
-the course skips the part in which the project, along with the ```azure-pipeline.yml``` gets set up
-Scroll down for complete ```azure-pipeline.yml```.
+the course skips the part in which the project, along with the ```azure-pipeline.yml``` gets set up. Scroll down for complete ```azure-pipeline.yml```.
 4. Access **Pipeline** section -> by clicking on code, you will automatically be redirected on GitHub source code
 5. A push in the repo triggers a new build in the DevOps Azure
 6. By accessing web app on the server, the app is already running the new build
