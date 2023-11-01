@@ -13,16 +13,19 @@ We will use:
 ##### Adding a quality control gate
 1. In project folder, access the ```azure-pipeline.yml```
 2. Add the following
-   ```- script:
-         python -m pip install flake8
-         flake8 .
-         displayName: "Run lint tests"
-   ```
-   or, if a Makefile has been configured:
-   ```- script:
-         python -m venb antenv
-         source antenv/bin/activate
-         make install
-         make lint
-   ```
+```
+ - script:
+      python -m pip install flake8
+      flake8 .
+      displayName: "Run lint tests"
+```
+or, if a Makefile has been configured:
+```
+- script:
+      python -m venb antenv
+      source antenv/bin/activate
+      make install
+      make lint
+      displayName: "Run lint tests"
+```
 4. 
