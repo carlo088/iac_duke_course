@@ -28,4 +28,3 @@ or, if a Makefile has been configured:
       make lint
       displayName: "Run lint tests"
 ```
-4. 
