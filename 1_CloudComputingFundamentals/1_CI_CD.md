@@ -1,9 +1,4 @@
-#### shh
-To ssh into azureVM from my MacOS
-```
-ssh -i ~/Documents/azureVM/myKey.pem azureuser@13.69.50.184
-```
-#### other commands
+#### General CLI commands
 wget is a CLI command to download something ```wget $LINK```
 tar zxvf is a CLI command unzip a tar file ```tar zxvf $PACKAGE```
 mv and cp to move or copy files ```mv $PATH_TO_FILE $LOCATION```, ```cp $PATH_TO_FILE $LOCATION```
