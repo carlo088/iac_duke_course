@@ -5,8 +5,13 @@ Infrastructure as Code project for Duke's Coursera Cloud Computing course
 
 After having cloned the repo, ```cd iac_duke_course```.
 
-### Module 1
+### Cloud Computing Fundamentals
 1. CI/CD
 2. Cloud Computing
 3. DevOps
 4. IaC
+5. Continuous Delivery Pipeline
+
+### Cloud Virtualization, Containers, APIs
+1. Virtual Machines
+ 
