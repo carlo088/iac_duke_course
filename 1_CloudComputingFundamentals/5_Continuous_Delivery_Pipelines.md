@@ -33,12 +33,12 @@ or, if a Makefile has been configured:
       displayName: "Run lint tests"
 ```
 
-### Setup Hugo Website
+#### Setup Hugo Website
 Building static website with Hugo
 
 https://d3c33hcgiwev3.cloudfront.net/vTjJyofrQS24ycqH6zEt4w_a72aad10ea7c4f5f9f10f63d8df4801f_Continuous-Delivery-for-Hugo-Static-Site-from-Zero.pdf?Expires=1699142400&Signature=j5~sxFELCx4eQZ~yHSMqQuKbTAWBtMhpaX~fw9PwLm3VJ8pJlivbXKE~ksAfOMJIaaa0Z4x7Q-WJICUXU7eeR~o7ewp8MvCBptFOH3ofbQ5vonxMwNtgJY-N8iebE08NT-Aw5f5ZP~Ztj0swJBjl5TdjsEwKAW0JDlkKyy6FYTY_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A
 
-#### AWS CodeBuild
+### AWS CodeBuild
 Automatically build code when GitHub repo is updated. In this case we have a Hugo website living in a S3 bucket. 
 1. Create build project and link it to repo
 2. Tell CodeBuild to build code according to a ```buildspec.yml```
