@@ -14,5 +14,9 @@ Docker Desktop for local workflow, GUI to monitor running containers.
 Docker Hub for public/private repos (docker containers). It stores images: for example, for most projects, one would first of all pull latest python image to begin with.
 
 Example: pulling a Jupyter environment. By just running  ```docker pull jupyter/datascience-notebook``` one can access a complete and complex jupyter setup.
-Secondly, run the environment with ```docker run -p 8888:8888 jupyter/scipy-notebook:latest```.
+Secondly, run the environment with ```docker run -p 8888:8888 jupyter/scipy-notebook:latest``` (where ```-p``` is used to map the port).
 Now, access jupyter environment from the local host at port 8888.
+
+
+More can be found at:
+https://noahgift.github.io/cloud-data-analysis-at-scale/topics/docker-format-containers
