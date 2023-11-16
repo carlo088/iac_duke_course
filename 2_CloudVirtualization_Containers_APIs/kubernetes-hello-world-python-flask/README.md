@@ -19,19 +19,6 @@ A Kubernetes Hello World Project for Python Flask.
 * To run do the following:  `docker run -p 8080:8080 flask-change` or run `make run` which has the same command
 
 * In a separate terminal invoke the web service via `curl http://127.0.0.1:8080/change/1/34`, or run `make invoke` which has the same command 
-```bash
-[
-  {
-    "5": "quarters"
-  }, 
-  {
-    "1": "nickels"
-  }, 
-  {
-    "4": "pennies"
-  }
-]
-```
 
 * Stop the running docker container by using `control-c` command
 
@@ -44,10 +31,7 @@ A Kubernetes Hello World Project for Python Flask.
 NAME             STATUS   ROLES    AGE   VERSION
 docker-desktop   Ready    master   30d   v1.19.3
 ```
-
-* Run the application in Kubernetes using the following command which tells Kubernetes to setup the load balanced service and run it:  
-
-`kubectl apply -f kube-hello-change.yaml` or run `make run-kube` which has the same command
+* Run the application in Kubernetes using the following command which tells Kubernetes to setup the load balanced service and run it:  `kubectl apply -f kube-hello-change.yaml` or run `make run-kube` which has the same command
 
 You can see from the config file that a load-balancer along with three nodes is the configured application.
 
@@ -88,9 +72,7 @@ spec:
         - containerPort: 8080
 ```
 
-* Verify the container is running
-
-`kubectl get pods`
+* Verify the container is running: `kubectl get pods`
 
 Here is the output:
 
@@ -101,9 +83,7 @@ flask-change-7b7d7f467b-fh6df   1/1     Running   0          7s
 flask-change-7b7d7f467b-fpsxr   1/1     Running   0          6s
 ```
 
-* Describe the load balanced service:
-
-`kubectl describe services hello-python-service`
+* Describe the load balanced service: `kubectl describe services hello-python-service`
 
 You should see output similar to this:
 
@@ -127,29 +107,6 @@ External Traffic Policy:  Cluster
 Events:                   <none>
 ```
 
-Invoke the endpoint to curl it:  
-
-`make invoke`
-
-```bash
-curl http://127.0.0.1:8080/change/1/34
-[
-  {
-    "5": "quarters"
-  }, 
-  {
-    "1": "nickels"
-  }, 
-  {
-    "4": "pennies"
-  }
-]
-```
+Invoke the endpoint to curl it:  `make invoke`
 
 To cleanup the deployment do the following: `kubectl delete deployment hello-python`
-
-## References
-
-* Azure [Kubernetes deployment strategy](https://azure.microsoft.com/en-us/overview/kubernetes-deployment-strategy/)
-* Service [Cluster Config](https://kubernetes.io/docs/tasks/access-application-cluster/service-access-application-cluster/) YAML file
-* [Kubernetes.io Hello World](https://kubernetes.io/blog/2019/07/23/get-started-with-kubernetes-using-python/)
