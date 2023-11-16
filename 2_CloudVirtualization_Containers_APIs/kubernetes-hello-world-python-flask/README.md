@@ -1,40 +1,24 @@
 # Kubernetes Hello World
-A Kubernetes Hello World Project for Python Flask.  This project uses [a simple Flask app that returns correct change](https://github.com/noahgift/flask-change-microservice) as the base project and converts it to Kubernetes.
-![kubernetes-load-balanced-cluster](https://user-images.githubusercontent.com/58792/111511557-3f45a280-8725-11eb-8e4a-5f5ef787796d.png)
-
-This recipe is in the book Practical MLOps.
-
-![9781098103002](https://user-images.githubusercontent.com/58792/111000927-eb1b7680-8350-11eb-8e24-d41064590fc1.jpeg)
-
+A Kubernetes Hello World Project for Python Flask.
 
 ## Assets in Repo
 
-* `Makefile`:  [Builds project](https://github.com/noahgift/kubernetes-hello-world-python-flask/blob/main/Makefile)
-* `Dockerfile`:  [Container configuration](https://github.com/noahgift/kubernetes-hello-world-python-flask/blob/main/Dockerfile)
-* `app.py`:  [Flask app](https://github.com/noahgift/kubernetes-hello-world-python-flask/blob/main/app.py)
-* `kube-hello-change.yaml`: [Kubernetes YAML Config](https://github.com/noahgift/kubernetes-hello-world-python-flask/blob/main/kube-hello-change.yaml)
+* `Makefile`:  [Builds project]
+* `Dockerfile`:  [Container configuration]
+* `app.py`:  [Flask app]
+* `kube-hello-change.yaml`: [Kubernetes YAML Config]
 
 ## Get Started
-
 * Create Python virtual environment `python3 -m venv ~/.kube-hello && source ~/.kube-hello/bin/activate`
+
 * Run `make all` to install python libraries, lint project, including `Dockerfile` and run tests
 
 ## Build and Run Docker Container
-
-* Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
-
-* To build the image locally do the following.
-
-`docker build -t flask-change:latest .` or run `make build` which has the same command.
-
-* To verify container run `docker image ls`
+* To build the image locally do the following: `docker build -t flask-change:latest .` or run `make build` which has the same command.
 
 * To run do the following:  `docker run -p 8080:8080 flask-change` or run `make run` which has the same command
 
-* In a separate terminal invoke the web service via curl, or run `make invoke` which has the same command 
-
-`curl http://127.0.0.1:8080/change/1/34`
-
+* In a separate terminal invoke the web service via `curl http://127.0.0.1:8080/change/1/34`, or run `make invoke` which has the same command 
 ```bash
 [
   {
