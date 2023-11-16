@@ -1,4 +1,4 @@
-#### Kuberntes
+#### Kubernetes
 What is K8s: container orchestration service.
 
 Kuberntes manages a Cluster. Clusters are made by Nodes that contain Pods, which can contain one or more containers.
@@ -43,5 +43,46 @@ Can be deployed with ```docker stack deploy ...```
 6. Overview of situation with ```kubectl get service```, once the service is ready, I can access the service at the port requested.
 7. Lastly, I can delete cluster with ```gcloud container cluster delete ...```
 
-#### Issues
+#### run_kubernetes.sh
+Put all in a single bash script.
+Set a docker path for the local deployment.
+```kubectl``` is as usual the K8s API.
+Run app and forward port to the host.
+```kubectl get pods``` to list available pods.
+Run command with ```./run_kubernetes.sh```
+```
+#!/usr/bin/env bash
 
+dockerpath="noahgift/flasksklearn"
+
+# Run in Docker Hub container with kubernetes
+kubectl run flaskskearlndemo\
+    --generator=run-pod/v1\
+    --image=$dockerpath\
+    --port=80 --labels app=flaskskearlndemo
+
+# List kubernetes pods
+kubectl get pods
+
+# Forward the container port to host
+kubectl port-forward flaskskearlndemo 8000:80
+```
+
+### Deploying a Kubernetes Python Flask App
+Assets in Repo:
+
+Makefile:  Builds project
+
+Dockerfile:  Container configuration
+
+app.py:  Flask app
+
+kube-hello-change.yaml: Kubernetes YAML Config
+
+
+1. Build and run Docker container:
+2. ```docker build -t flask-change:latest .``` or ```make build```
+3. then ``` docker run -p 8080:8080 flask-change``` or ```make run```
+4. In a separate terminal invoke the web service via curl: ```make invoke``` which has the same command ```curl http://127.0.0.1:8080/change/1/34```
+5. Run the application in Kubernetes using the following command which tells Kubernetes to setup the load balanced service and run it:
+```kubectl apply -f kube-hello-change.yaml or run make run-kube```
