@@ -69,22 +69,21 @@ kubectl port-forward flaskskearlndemo 8000:80
 ```
 
 ### Deploying a Kubernetes Python Flask App
-# Kubernetes Hello World
 A Kubernetes Hello World Project for Python Flask.
 
-## Assets in Repo
+##### Assets in Repo
 
 * `Makefile`:  [Builds project]
 * `Dockerfile`:  [Container configuration]
 * `app.py`:  [Flask app]
 * `kube-hello-change.yaml`: [Kubernetes YAML Config]
 
-## Get Started
+##### Get Started
 * Create Python virtual environment `python3 -m venv ~/.kube-hello && source ~/.kube-hello/bin/activate`
 
 * Run `make all` to install python libraries, lint project, including `Dockerfile` and run tests
 
-## Build and Run Docker Container
+##### Build and Run Docker Container
 * To build the image locally do the following: `docker build -t flask-change:latest .` or run `make build` which has the same command.
 
 * To run do the following:  `docker run -p 8080:8080 flask-change` or run `make run` which has the same command
@@ -93,7 +92,7 @@ A Kubernetes Hello World Project for Python Flask.
 
 * Stop the running docker container by using `control-c` command
 
-## Running Kubernetes Locally
+##### Running Kubernetes Locally
 
 * Verify Kubernetes is working via docker-desktop context
 
