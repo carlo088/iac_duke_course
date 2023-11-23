@@ -1,0 +1,8 @@
+### Microservices ``
+In general, a DevOps practice. Main advantages: serverless (code runs without provisioning servers).
+Small, autonomous, specialized, high degree of reliability.
+Where can one run a Microservice? In a container or on a cloud service such as AWS Lambda: a serverless compute service that runs your code in response to events
+
+**Flask** Very common, it maps a python function to a URL 
+**API** to define interactions between services.
+**JSON** to interchange data.
