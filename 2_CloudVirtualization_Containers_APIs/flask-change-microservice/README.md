@@ -3,8 +3,6 @@
 # flask-change-microservice
 Small Flask Microservice that makes change: `make install` and then given 1 input. Example: `1.34` and output will be the change for that amount.
 
-*Coursera Lab:  duke-coursera-ccb-lab2*
-
 ![coursera-lab](https://user-images.githubusercontent.com/58792/108137449-df0e0300-7089-11eb-8b11-74f478b71d11.png)
 
 
