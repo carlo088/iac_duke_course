@@ -23,7 +23,7 @@ A Kubernetes Hello World Project for Python Flask.
 
 ## Running Kubernetes Locally
 
-* Verify Kubernetes is working via docker-desktop context
+* Verify Kubernetes is working via `docker-desktop context`
 
 ```bash
 (.kube-hello) ➜  kubernetes-hello-world-python-flask git:(main) kubectl get nodes
