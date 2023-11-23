@@ -1,7 +1,7 @@
 [![Flask Change Microservice Test](https://github.com/noahgift/flask-change-microservice/actions/workflows/main.yml/badge.svg)](https://github.com/noahgift/flask-change-microservice/actions/workflows/main.yml)
 
 # flask-change-microservice
-Small Flask Microservice that makes change
+Small Flask Microservice that makes change: `make install` and then given 1 input. Example: `1.34` and output will be the change for that amount.
 
 *Coursera Lab:  duke-coursera-ccb-lab2*
 
