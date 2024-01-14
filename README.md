@@ -14,4 +14,7 @@ After having cloned the repo, ```cd iac_duke_course```.
 
 ### Cloud Virtualization, Containers, APIs
 1. Virtual Machines
+2. Containers
+3. Kubernetes
+4. Microservices
  
