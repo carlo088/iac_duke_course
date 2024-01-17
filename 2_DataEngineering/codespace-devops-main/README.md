@@ -1,4 +1,5 @@
 **Containerize CLI Tool**: done through the Dockerfile and through a build.sh
+
 `
 FROM python:3.7
 WORKDIR /app
@@ -6,11 +7,13 @@ COPY . app.py /app/
 RUN pip install --upgrade pip &&\
     pip install --trusted-host pypi.python.org -r requirements.txt
 `
+
 `
 #!/usr/bin/env bash
 docker build --tag=clickecho .
 docker run -it clickecho python app.py --name "Big John"
 `
+
 Docker image can then be deployed to a container registry such as AWS ECS and then run it from kubernetes and have it deployed.
 
 # codespace-devops
