@@ -12,5 +12,10 @@ Similar to GitHub Actions, to test code in AWS systems.
 
 #### AWS Lambda
 Function as a service. Holds the python function that has all your logics.
+**Chech awslamba folder for more on this topic**
 
-```df -h``` print to CLI the available space
+
+
+
+
+TIP: ```df -h``` print to CLI the available space
