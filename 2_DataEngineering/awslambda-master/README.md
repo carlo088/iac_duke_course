@@ -17,3 +17,12 @@ Test two ways:
 When app is deployed as a *Lambda function* it can be invoked thorugh AWS Lambda on web browser or also from AWS Cloud9 dev environment.
 
 **Triggers** another type of trigger (instead of the API Gateway) is S3. When something is uploaded in the S3, this triggers the function.
+
+![Screen Shot 2024-01-23 at 23 19 43](https://github.com/carlo088/iac_duke_course/assets/96287482/5d80f415-4db5-4951-9f95-92df21a72d5e)
+
+## Serverless Data Pipeline
+- AWS DynamoDB, create or use an existing table. Then add stuff in a newly created one or just visualize a know one. Lambda function will pull data from this DB and send it to SQS.
+- AWS SQS to send messages (doesn't saturate, always works, can't blow up queue). Create queue and recieve/send messages. Will set trigger to when producer (Lambda that pulls from DynamoDB) sends a message and as batch size to process 1 message per time (and removes them from queue).
+- AWS CloudWatch is the trigger. Fix a rate (for ex. once a minute). Also provides logs.
+- AWS Lambda handler ('serverless_sentiment_lambda.py') will pull messages, find text in corresponding wikipedia pages and peform sentiment analysis
+- AWS S3 recieves and holds what get sent from the lambda
