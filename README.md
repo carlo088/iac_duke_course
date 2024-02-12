@@ -18,3 +18,12 @@ After having cloned the repo, ```cd iac_duke_course```.
 3. Kubernetes
 4. Microservices
  
+### Data Engineering
+1. Big Data
+2. Data Engineering
+3. Cloud Storage
+
+### MLOPS
+1. Machine Learning Engineering
+2. AutoML
+3. MLOps
