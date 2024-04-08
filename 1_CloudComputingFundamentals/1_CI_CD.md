@@ -48,7 +48,6 @@ all: install lint test
 3. Lint -> pylint is the tool, with these settings only "warnings and errors", then tell which files to look to. To check code: ```make lint```
 4. Test -> pytest is the tool with the script to run to test. To test: ```make test```
 
-#### GitHub Actions
 **Quickstart black**
 ```
 name: black-action
@@ -64,6 +63,7 @@ jobs:
           check_mode: "true"
 ```
 **GitHub Actions**
+
 In GitHub, select Actions and then "set up a workflow yoursel".
 In ```.github/workflows/``` one will find ```main.yml```. Already has a template: whenever one pushes new code to the repo, a set of tests gets done. If one already has a ```Makefile```, this becomes trivial.
 ```
