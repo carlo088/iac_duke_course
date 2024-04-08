@@ -49,6 +49,21 @@ all: install lint test
 4. Test -> pytest is the tool with the script to run to test. To test: ```make test```
 
 #### GitHub Actions
+**Quickstart black**
+```
+name: black-action
+on: [push, pull_request]
+jobs:
+  linter_name:
+    name: runner / black formatter
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: datadog/action-py-black-formatter@v2.1
+        with:
+          check_mode: "true"
+```
+**GitHub Actions**
 In GitHub, select Actions and then "set up a workflow yoursel".
 In ```.github/workflows/``` one will find ```main.yml```. Already has a template: whenever one pushes new code to the repo, a set of tests gets done. If one already has a ```Makefile```, this becomes trivial.
 ```
